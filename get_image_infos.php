@@ -13,25 +13,11 @@ $sql="SELECT * FROM images WHERE image_name  = '".$q."'";
 
 $result = mysql_query($sql);
 
-echo "<table border='1'>
-
-<style>
-table, th, td {
-border:1px solid #CCCCCC;
-
-font-family: Verdana;
-font-size: 1em;
-text-align: center;
-padding: 5px;
-}
-th {
-background-color: #F6E4CC;
-color: #333333;
-border:1px solid #CCCCCC;
-}
-</style>
+echo 
+"
 
 
+<table class='fixed'>
 
 <tr>
 <th>Image Name</th>
@@ -52,6 +38,7 @@ while($row = mysql_fetch_array($result))
   echo "</tr>";
   }
 echo "</table>";
+
 
 mysql_close($con);
 ?>

@@ -147,6 +147,59 @@ width:50%;
 	padding-top: 20px;
     border: 1px solid #cccccc;
  }
+
+#restore_form_left {
+float:left;
+width:50%;
+}
+#restore_form_right {
+float:right;
+width:50%;
+overflow:auto;
+height:120px;
+}
+#txtHint{
+float:right;
+width:50%;
+/*overflow:auto;
+/*height:120px;*/
+}
+
+table.fixed { 
+		
+		width:100%;
+		
+		border-spacing: 0px 0px; 
+
+-moz-box-shadow: 10px 10px 10px #888;
+-webkit-box-shadow: 10px 10px 10px #888;
+box-shadow: 10px 10px 10px #888;
+}
+table.fixed th {
+ 		overflow: hidden;
+		color:#333333;
+		font-size: 12px;
+  		font-family:Verdana, Arial, sans-serif;
+		font-family: Arial, Verdana;
+    	text-shadow: 2px 2px 2px #ccc;
+		border: 1px solid #cccccc;
+		background-color:#F6E4CC
+
+}
+
+table.fixed td {
+		overflow: hidden;
+ 		color:#333333;
+		font-size: 11px;
+  		font-family:Verdana, Arial, sans-serif;
+		font-family: Arial, Verdana;
+    	text-shadow: 2px 2px 2px #ccc;
+		padding:5px;
+		border: 1px solid #cccccc;
+background-color:#F6E4CC
+}
+
+
 /* labelForm ------------------------------------------ */
 label {
     font-family: Arial, Verdana;
@@ -354,15 +407,8 @@ tr:hover {
         top: auto;
     }
 
-#txtHint{
 
- 
-    overflow:auto;
-	height:120px;
-	
-    width: 530px;
-float:right;
-}
+
 
 
 
