@@ -125,7 +125,14 @@ footer a {
 	padding-top: 20px;
     border: 1px solid #cccccc;
 }
-
+#safe_form_left {
+float:left;
+width:50%;
+}
+#safe_form_right {
+float:right;
+width:50%;
+}
 #input_long{
   float:right;
 }
