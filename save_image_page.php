@@ -97,7 +97,7 @@ window.onload=function(){
 <div id="safe_form_left"> 
 	<div class="field">
     	<label for="image_name"><?php echo $lang['SAVE_FORM_IMAGE_NAME']; ?></label>
-		<input type="text" class="input" name="image_name" id="image_name" title= <?php echo $lang['SAVE_FORM_IMAGE_NAME']; ?> >
+		<input type="text" class="input" name="image_name" id="image_name" autofocus="autofocus"; />
 	</div>
 
 	<div class="styled-select">
@@ -117,7 +117,7 @@ window.onload=function(){
 	</div>
 	<div class="field">
     	<label for="hw_type"><?php echo $lang['SAVE_FORM_HARDWARE']; ?></label> <!-- Abfrage nach Hardware -->
-		<input type="text" class="input" name="hw_type" id="hw_type" title="Bitte den Rechner Typ angeben z.B Celsius 230..." />
+		<input type="text" class="input" name="hw_type" id="hw_type" placeholder="" />
 						
 	</div>
 
@@ -125,8 +125,8 @@ window.onload=function(){
 		<input type="button"  class="button" value="<?php echo $lang['SAVE_FORM_BUTTON_STOP']; ?>" onclick="myFrm = document.getElementById('saveform');myFrm.action='jump_save.php?what=stop'; myFrm.submit();" />
 </div>
 <div id="safe_form_right"> 
-<label for="image_description"><?php echo $lang['SAVE_FORM_IMAGE_DESCRIPTION']; ?></label>
-<textarea id="image_description" name="image_description" cols="55" rows="13"></textarea>
+<label class='right' for="image_description"><?php echo $lang['SAVE_FORM_IMAGE_DESCRIPTION']; ?></label>
+<textarea class="textarea"placeholder="Describe the image with some words..." id="image_description" name="image_description"></textarea>
 </div>	
 
 
@@ -157,14 +157,4 @@ window.onload=function(){
   <footer>
     <a href="http://www.sinupedia.de">by skybot</a>
   </footer>
-</div>
-
-
-
-
-
-<div id="input_long">
-<label for="image_description"><?php echo $lang['SAVE_FORM_IMAGE_DESCRIPTION']; ?></label>
-<textarea id="image_description" name="image_description" cols="55" rows="13"></textarea>
-		
-</div>				
+</div>			
