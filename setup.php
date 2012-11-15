@@ -1,22 +1,16 @@
 <!doctype html>
-<?php   include "auth.php";
-        include 'mysql_connectinfo.php';
-		include_once 'common.php'; 
-        $ergebnis =mysql_query("SELECT* FROM images");
-        $datensaetze = mysql_num_rows($ergebnis);
-        while($row = mysql_fetch_array($ergebnis))
-        $num=mysql_numrows($ergebnis);
-        mysql_close();
-		
-
-?>
-
+<meta charset="utf-8">
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link href="./css/menu_styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.fixheadertable.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/humanity/jquery-ui-1.9.1.custom.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+<?php
+		include('language.php'); 
+		include('mysql.php');
+		include('functions.php');
+?>
+
+
 
 
 <div id="doc">
@@ -25,7 +19,7 @@
 <a href="?lang=en"><img src="images/en.png" /></a>
 <a href="?lang=de"><img src="images/de.png" /></a>
 </div>
-    <h1>TAC TRAINING RECOVERY  <img src="./images/logo.png" width="30"> </h1>
+    <h1><img src="./images/logo.png" alt="logo"></h1>
     <nav>
       <ul>
    <li><a href='index.php'><span><?php echo $lang['MENU_HOME']; ?></span></a></li>

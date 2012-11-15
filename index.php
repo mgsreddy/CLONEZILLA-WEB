@@ -2,27 +2,21 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link href="./css/menu_styles.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="./css/humanity/jquery-ui-1.9.1.custom.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery.fixheadertable.js"></script>
-<script type="text/javascript" src="js/fixheadertable.js"></script>
-<?php   include "auth.php";
-        include 'mysql_connectinfo.php';
-		include_once 'common.php'; 
-        $ergebnis =mysql_query("SELECT* FROM images");
-        $datensaetze = mysql_num_rows($ergebnis);
-        while($row = mysql_fetch_array($ergebnis));
-        $num=mysql_numrows($ergebnis);
-        mysql_close();
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<?php
+		include('language.php'); 
+		include('mysql.php');
+		include('functions.php');
 ?>
+
+
 <div id="doc">
 <header id="header">
 	<div id="languages">
 <a href="?lang=en"><img src="images/en.png" alt="German flag" /></a>
 <a href="?lang=de"><img src="images/de.png" alt="English flag"/></a>
 	</div>
-<h1>TAC TRAINING RECOVERY <img src="./images/logo.png" width="30" alt="logo"> </h1>
+<h1><img src="./images/logo.png" alt="logo"></h1>
 
 <nav><ul>
    <li class='active '><a href='index.php'><span><?php echo $lang['MENU_HOME']; ?></span></a></li>
@@ -34,44 +28,92 @@
 </header>
   <section id="content_index">
 <article>
-	<h2><?php echo $lang['MENU_HOME']; ?></h2>
-
-<table class="fixme">
-	<thead>
-        <tr>
-            <th><b><?php echo $lang['INDEX_TABLE_IMAGE_NAME']; ?></b></th>
-            <th><b><?php echo $lang['INDEX_TABLE_HARDWARE']; ?></b></th>
-            <th><b><?php echo $lang['INDEX_TABLE_DATE']; ?></b></th>
-        </tr>
-    </thead>
 
 
 <?php
-$i=0;
-while ($i < $num) {
+// Wenn kein AJAX, dann HTML Page ausgeben, sonst ajax actions ausführen
+if(!IS_AJAX) {
+	// KEIN AJAX Request
+	// Erstellt die "normale" HTML Page
 
-$f1=mysql_result($ergebnis,$i,"image_name");
-$f3=mysql_result($ergebnis,$i,"hw_type");
-$f4=mysql_result($ergebnis,$i,"date");
-?>
-	<tbody>
-		<tr>
-			<td><?php echo $f1; ?></td>
-			<td><?php echo $f3; ?></td>
-			<td><?php echo $f4; ?></td>
-		</tr>
-	</tbody>
-<?php
-$i++;
+	// Daten aus Datenbank besorgen
+	$query = "SELECT id, image_name, part, os, hw_type, date FROM `images` ORDER BY id ASC"; // Ausführen einer SQL-Anfrage
+	$result = sql_query($query);
+
+	$i = 0;
+	while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$i++;
+		
+		// Alle Spalten
+		foreach ($line as $key=>$col_value) {
+			if($key=='timestamp') {
+				$col_value = date('d.m.Y H:i', $col_value);
+			}
+			$data[$i][] = $col_value;
+		}
+		
+		$data[$i][] = '<a class="delete_row" href="#"><img src="images/icon_del_light.png" alt="delete" /></a>'; // Aktions Links
+	}
+	$return = "<table class=\"table1\" width=\"100%\">\n";
+	
+	//Tabellen Kopf
+	//$return .= "\t<tr>\n";
+	$return .= "\t\t<th>ID</th>\n";
+	$return .= "\t\t<th>Image Name</th>\n";
+	$return .= "\t\t<th>Festplatte</th>\n";
+	$return .= "\t\t<th>Betriebssystem</th>\n";
+	$return .= "\t\t<th>Hardware</th>\n";
+	$return .= "\t\t<th>Datum</th>\n";
+	$return .= "\t\t<th>Aktion</th>\n";
+	//$return .= "\t</tr>\n";
+	///////
+	
+	//Tabellen Daten
+	if(count($data)>0) {
+		foreach($data as $line) 
+		{
+			$return .= MakeRow($line);
+		}
+	}
+	$return .= "</table>\n";
+	///////
+
+
+	//HTML Template
+$template = 
+'<html>
+	<head>
+		
+		
+		<!-- JQuery -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/functions.js"></script>
+	</head>
+
+	<body>
+		
+		'.$return.'
+	</body>
+</html>';
+
+	echo $template; // Alles ausgeben
+	///////	
+
+} else {
+	switch ($_POST['action']) {
+ 	case "delete_row":
+			$query = "DELETE FROM `images` WHERE`id`=".saveColumn($_POST['id']); 
+			echo $query;
+			sql_query($query);
+			break; 
+	}
 }
+
+// Schließen der Verbinung
+mysql_close($link);
 ?>
-</table>
-
     </article>
-</section>
-
-
-  
+</section>  
 <footer>
     <a href="http://www.sinupedia.de">by skybot</a>
 </footer>

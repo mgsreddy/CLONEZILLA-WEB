@@ -5,28 +5,16 @@ Clean all the previous saved config file if they exist...done!
 [1;33mClient OS type when doing Clonezilla job is: nfsroot
 [0;39mstart_ocs_service -t savedisk -o sda ask_user
 clonezilla.lock dir: /var/lock/clonezilla
-[1;33mYour system is already in clonezilla mode... we will stop it first if necessary, then start it again...
-[0;39mStop OCS mode for node 192.168.100.10, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.11, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.12, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.13, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.14, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.15, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.16, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.17, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.18, no matter it's in OCS mode or not.
-Stop OCS mode for node 192.168.100.19, no matter it's in OCS mode or not.
 [1;33mWarning!!! "range" option is found in dhcpd.conf, this is not a good way to operate Clonezilla... It is better to let your DRBL client acquire same IP address by setting MAC address in dhcpd.conf so that you will NOT overwrite the OS of some unknown machines.
-[0;39mStarting the OCS service for node IP add. = 192.168.100.10
-Starting the OCS service for node IP add. = 192.168.100.11
-Starting the OCS service for node IP add. = 192.168.100.12
-Starting the OCS service for node IP add. = 192.168.100.13
-Starting the OCS service for node IP add. = 192.168.100.14
-Starting the OCS service for node IP add. = 192.168.100.15
-Starting the OCS service for node IP add. = 192.168.100.16
-Starting the OCS service for node IP add. = 192.168.100.17
-Starting the OCS service for node IP add. = 192.168.100.18
-Starting the OCS service for node IP add. = 192.168.100.19
+[0;39mStarting the OCS service for node IP add. = 192.168.100.2
+Starting the OCS service for node IP add. = 192.168.100.3
+Starting the OCS service for node IP add. = 192.168.100.4
+Starting the OCS service for node IP add. = 192.168.100.5
+Starting the OCS service for node IP add. = 192.168.100.6
+Starting the OCS service for node IP add. = 192.168.100.7
+Starting the OCS service for node IP add. = 192.168.100.8
+Starting the OCS service for node IP add. = 192.168.100.9
+Starting the OCS service for node IP add. = 192.168.100.10
 Setting the PXE clients to DRBL mode with label "Clonezilla: save disk (choose later) as image sda"...
 Turn off all MENU DEFAULT in /tftpboot/nbi_img/pxelinux.cfg/default... 
 Make "clonezilla" as default label in /tftpboot/nbi_img/pxelinux.cfg/default.

@@ -1,90 +1,16 @@
-<?php   include "auth.php";
-		include "mysql_connectinfo.php";
-		include_once 'common.php'; 
-
-?>
+<!doctype html>
+<meta charset="utf-8">
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-<link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link href="./css/menu_styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<script src="./js/refresh_activity.js"></script>
+<script src="./js/get_image_info.js"></script>
 
-<!-- Das ist neu -->
-<script type="text/javascript">
-function Ajax(){
-var xmlHttp;
-	try{	
-		xmlHttp=new XMLHttpRequest();// Firefox, Opera 8.0+, Safari
-	}
-	catch (e){
-		try{
-			xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
-		}
-		catch (e){
-		    try{
-				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			catch (e){
-				alert("No AJAX!?");
-				return false;
-			}
-		}
-	}
-
-xmlHttp.onreadystatechange=function(){
-	if(xmlHttp.readyState==4){
-		document.getElementById('ReloadThis').innerHTML=xmlHttp.responseText;
-		setTimeout('Ajax()',1000);
-	}
-}
-xmlHttp.open("GET","getLog.php",true);
-xmlHttp.send(null);
-}
-
-window.onload=function(){
-	setTimeout('Ajax()',1000);
-}
-</script>
-<script>
-function showUser(str)
-{
-if (str=="")
-  {
-  document.getElementById("txtHint").innerHTML="";
-  return;
-  } 
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","get_image_infos.php?q="+str,true);
-xmlhttp.send();
-}
-</script>
-
-
-
-
-
-
-
-<!-- Das ist neu -->
-
-
-
-
-
-
+<?php
+		include('language.php'); 
+		include('mysql.php');
+		include('functions.php');
+?>
 
 <div id="doc">
 	<header id="header">
@@ -92,7 +18,7 @@ xmlhttp.send();
 		<a href="?lang=en"><img src="images/en.png" /></a>
 		<a href="?lang=de"><img src="images/de.png" /></a>
 	</div>
-    	<h1>TAC TRAINING RECOVERY <img src="./images/logo.png" width="30"> </h1>
+    	<h1><img src="./images/logo.png" alt="logo"></h1>
     	<nav>
       		<ul>
    				<li><a href='index.php'><span><?php echo $lang['MENU_HOME']; ?></span></a></li>

@@ -1,77 +1,15 @@
 <!doctype html>
 <meta charset="utf-8">
-<?php   include "auth.php";
-		include "mysql_connectinfo.php";
-		include_once 'common.php'; 
-?>
-
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link href="./css/menu_styles.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/humanity/jquery-ui-1.9.1.custom.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<script src="./js/refresh_activity.js"></script>
 
-<!-- Das ist neu -->
-<script type="text/javascript">
-function Ajax(){
-var xmlHttp;
-	try{	
-		xmlHttp=new XMLHttpRequest();// Firefox, Opera 8.0+, Safari
-	}
-	catch (e){
-		try{
-			xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
-		}
-		catch (e){
-		    try{
-				xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			catch (e){
-				alert("No AJAX!?");
-				return false;
-			}
-		}
-	}
-
-xmlHttp.onreadystatechange=function(){
-	if(xmlHttp.readyState==4){
-		document.getElementById('ReloadThis').innerHTML=xmlHttp.responseText;
-		setTimeout('Ajax()',1000);
-	}
-}
-xmlHttp.open("GET","getLog.php",true);
-xmlHttp.send(null);
-}
-
-window.onload=function(){
-	setTimeout('Ajax()',1000);
-}
-
-
-
-    $(function() {
-        $( document ).tooltip({
-            position: {
-                my: "center bottom-20",
-                at: "center top",
-                using: function( position, feedback ) {
-                    $( this ).css( position );
-                    $( "<div>" )
-                        .addClass( "arrow" )
-                        .addClass( feedback.vertical )
-                        .addClass( feedback.horizontal )
-                        .appendTo( this );
-                }
-            }
-        });
-    });
-
-</script>
-<!-- Das ist neu -->
-
-
-
+<?php
+		include('language.php'); 
+		include('mysql.php');
+		include('functions.php');
+?>
 
 <div id="doc">
   <header id="header">
@@ -79,7 +17,7 @@ window.onload=function(){
 <a href="?lang=en"><img src="images/en.png" /></a>
 <a href="?lang=de"><img src="images/de.png" /></a>
 </div>
-    <h1>TAC TRAINING RECOVERY <img src="./images/logo.png" width="30"> </h1>
+    <h1><img src="./images/logo.png" alt="logo"></h1>
     <nav>
             <ul>
    <li><a href='index.php'><span><?php echo $lang['MENU_HOME']; ?></span></a></li>
@@ -88,6 +26,9 @@ window.onload=function(){
    <li><a href='/setup.php'><span><?php echo $lang['MENU_SETUP']; ?></span></a></li>
       </ul>    </nav>
   </header>
+
+
+
 <section id="content">
     <article>
       <h2><?php echo $lang['SAVE_H1']; ?></h2>
