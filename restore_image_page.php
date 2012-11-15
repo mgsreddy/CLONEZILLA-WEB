@@ -2,7 +2,6 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <script src="./js/refresh_activity.js"></script>
 <script src="./js/get_image_info.js"></script>
 

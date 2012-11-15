@@ -2,7 +2,9 @@
 <meta charset="utf-8">
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/functions.js"></script>
+
 <?php
 		include('language.php'); 
 		include('mysql.php');
@@ -82,13 +84,7 @@ if(!IS_AJAX) {
 	//HTML Template
 $template = 
 '<html>
-	<head>
-		
-		
-		<!-- JQuery -->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript" src="./js/functions.js"></script>
-	</head>
+
 
 	<body>
 		

@@ -1,0 +1,389 @@
+/* HTML5 HACK -------------------------------------- */  
+header, section, footer, aside, nav, article {  
+ display: block
+}
+ 
+/* LAYOUT ------------------------------------------ */
+ 
+body {
+  background: #fff;
+  font-size: 12px;
+  color: #333333;
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+
+}
+ 
+#doc  {
+  width: 950px;
+
+}
+ 
+/* HEADER & NAVIGATION ------------------------------ */
+ 
+#header {
+  background: #336699;
+  padding: 0 15px;
+  width:100%;
+  font-size: 16px;
+  border:1px solid #CCCCCC;
+}
+ 
+#header h1 {
+  margin: 0;
+  color: #FFFFFF;
+}
+ 
+#header nav ul {
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+ 
+#header nav ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ 
+#header nav ul li a {
+  display: inline-block;
+  padding: 2px 10px;
+  color: #333333;
+  background-color: #F6E4CC;
+  text-decoration: none;
+}
+ 
+#header nav ul li.active a,
+#header nav ul li a:hover {
+  background-color: #fff;
+  color: #444;
+}
+ 
+/* CONTENT ------------------------------------------ */
+ 
+#content {
+  background-color:#C7E1BA;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:1px solid #CCCCCC;
+  height:325px;
+  margin:1px 0;
+  padding: 0 15px;
+  width:100%;
+} 
+/* CONTENT ------------------------------------------ */
+ 
+#content_index {
+  background-color:#C7E1BA;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:1px solid #CCCCCC;
+  height:520px;
+  margin:1px 0;
+  padding: 0 15px;
+  width:100%;
+} 
+
+/* SIDEBAR ------------------------------------------ */
+ 
+aside {
+  background: #F6E4CC;
+  width:100%;
+  padding: 0 15px;
+  margin:1px auto;
+  float: left;
+  border: 1px solid #cccccc;
+  height: 190px;
+  
+}
+ 
+/* FOOTER ------------------------------------------ */
+ 
+footer {
+  clear: both;
+  background: #DDD;
+  text-align: right;
+  padding: 10px 15px;
+  margin:1px auto;
+  width:100%;
+  border: 1px solid #cccccc;
+}
+ 
+footer a {
+  color: #999;
+}
+
+/* saveform ------------------------------------------ */
+#saveform {
+ 
+
+    padding: 20px;
+    background: #F4F0EC;
+    overflow:auto;
+	padding-top: 20px;
+    border: 1px solid #cccccc;
+}
+#safe_form_left {
+float:left;
+width:50%;
+}
+#safe_form_right {
+float:right;
+width:50%;
+}
+#input_long{
+  float:right;
+}
+
+/* restoreform ------------------------------------------ */
+#restoreform {
+    padding: 20px;
+    background: #F4F0EC;
+    overflow:auto;
+	padding-top: 20px;
+    border: 1px solid #cccccc;
+ }
+
+#restore_form_left {
+float:left;
+width:50%;
+}
+#restore_form_right {
+float:right;
+width:50%;
+overflow:auto;
+height:120px;
+}
+#txtHint{
+float:right;
+width:50%;
+/*overflow:auto;
+/*height:120px;*/
+}
+
+table.fixed { 
+		
+		width:100%;
+		
+		border-spacing: 0px 0px; 
+
+-moz-box-shadow: 10px 10px 10px #888;
+-webkit-box-shadow: 10px 10px 10px #888;
+box-shadow: 10px 10px 10px #888;
+}
+table.fixed th {
+ 		overflow: hidden;
+		color:#333333;
+		font-size: 12px;
+  		font-family:Verdana, Arial, sans-serif;
+		font-family: Arial, Verdana;
+    	text-shadow: 2px 2px 2px #ccc;
+		border: 1px solid #cccccc;
+		background-color:#F6E4CC
+
+}
+
+table.fixed td {
+		overflow: hidden;
+ 		color:#333333;
+		font-size: 11px;
+  		font-family:Verdana, Arial, sans-serif;
+		font-family: Arial, Verdana;
+    	text-shadow: 2px 2px 2px #ccc;
+		padding:5px;
+		border: 1px solid #cccccc;
+background-color:#F6E4CC
+}
+
+
+/* labelForm ------------------------------------------ */
+label {
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 120px;
+    line-height: 25px;
+    font-size: 15px;
+    }
+.input{
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 200px;
+    color: #797979;
+	margin-top: 5px;
+    }
+
+.input:hover{
+background-color:#F6E4CC;
+}
+.textarea{
+    font-family: Arial, Verdana;
+    font-size: 15px;
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 300px;
+	height:168px;
+    color: #797979;
+	margin-top: 5px;
+    }
+
+.textarea:hover{
+background-color:#F6E4CC;
+}
+
+.right{
+    font-family: Arial, Verdana;
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-right:10px;
+    text-align: right;
+    width: 120px;
+    line-height: 25px;
+    font-size: 15px;
+    }
+
+
+.styled-select select {
+   background: transparent;
+   width: 200px;
+   padding: 5px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   height: 34px;
+   margin-top: 5px;
+}
+
+/* Button Form ------------------------------------------ */
+.button
+{        
+	display: inline-block;
+	white-space: nowrap;
+	background-color: #ccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+	background-image: -webkit-linear-gradient(top, #eee, #ccc);
+	background-image: -moz-linear-gradient(top, #eee, #ccc);
+	background-image: -ms-linear-gradient(top, #eee, #ccc);
+	background-image: -o-linear-gradient(top, #eee, #ccc);
+	background-image: linear-gradient(top, #eee, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee', EndColorStr='#cccccc');
+	border: 1px solid #777;
+	padding: 0 1.5em;
+	margin: 0.5em;
+	font: bold 1em/2em Arial, Helvetica;
+	text-decoration: none;
+	color: #333;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	-moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}
+
+.button:hover
+{
+	background-color: #ddd;        
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+	background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+	background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+	background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+	background-image: -o-linear-gradient(top, #fafafa, #ddd);
+	background-image: linear-gradient(top, #fafafa, #ddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');        
+}
+
+.button:active
+{
+	-moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+	position: relative;
+	top: 1px;
+}
+
+.button:focus
+{
+	outline: 0;
+	background: #fafafa;
+}    
+
+.button:before
+{
+	background: #ccc;
+	background: rgba(0,0,0,.1);
+	float: left;        
+	width: 1em;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 0 1em 0 -1em;
+	padding: 0 .2em;
+	-moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+	-moz-border-radius: .15em 0 0 .15em;
+	-webkit-border-radius: .15em 0 0 .15em;
+	border-radius: .15em 0 0 .15em;
+        pointer-events: none;        
+}
+
+/* Tabellen Form ------------------------------------------ */
+table.table1{
+    width:100%;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.1em;
+    font-style: normal;
+    border-collapse:separate;
+	padding-top:10px;
+    
+}
+.table1 th{
+  background-color:#FFC04D;
+  border-color:#FFB733;
+  border-style:solid;
+  border-width:1px 1px 3px;
+  color:#000000;
+  padding:5px;
+    
+           
+}
+
+.table1 td{
+    padding:5px;
+    text-align:center;
+    background-color:#F6E4CC;
+    border: 2px solid #F8D5AD;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    color:#666;
+    /*text-shadow:1px 1px 1px #fff;*/
+    overflow: auto;
+}
+
+
+
+#activitybox{
+
+    /*white-space:pre-line;*/
+    overflow:auto;
+	height:105px;
+	border:1px solid #CCCCCC;
+}
+
+#languages#languages {
+  float:right;
+}
