@@ -1,4 +1,5 @@
 <?php
+include('language.php'); 
 $q=$_GET["q"];
 
 $con = mysql_connect('localhost', 'root', '1234');
@@ -13,19 +14,19 @@ $sql="SELECT * FROM images WHERE image_name  = '".$q."'";
 
 $result = mysql_query($sql);
 
-echo 
-"
 
 
-<table class='fixed'>
 
-<tr>
-<th>Image Name</th>
-<th>Festplatte</th>
-<th>Operating System</th>
-<th>Hardware</th>
-<th>Date</th>
-</tr>";
+
+echo "<table class='fixed'>";
+
+echo "<tr>";
+echo $lang['INDEX_TABLE_IMAGE_NAME'];
+echo $lang['INDEX_TABLE_HARDDISK'];
+echo $lang['INDEX_TABLE_OS'];
+echo $lang['INDEX_TABLE_HARDWARE'];
+echo $lang['INDEX_TABLE_DATE'];
+echo "</tr>";
 
 while($row = mysql_fetch_array($result))
   {

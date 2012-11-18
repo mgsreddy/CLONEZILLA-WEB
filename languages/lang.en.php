@@ -23,16 +23,19 @@ $lang['MENU_SETUP'] = 'SETUP';
 // INDEX PAGE
 
 $lang['INDEX_H1'] = 'Home';
-$lang['INDEX_TABLE_IMAGE_NAME'] = 'Image name';
-$lang['INDEX_TABLE_HARDWARE'] = 'Hardware';
-$lang['INDEX_TABLE_DATE'] = 'Date';
+$lang['INDEX_TABLE_IMAGE_NAME'] = '<th>Image name</th>';
+$lang['INDEX_TABLE_HARDDISK'] = '<th>Harddrive</th>';
+$lang['INDEX_TABLE_OS'] = '<th>Operating System</th>';
+$lang['INDEX_TABLE_HARDWARE'] = '<th>Hardware</th>';
+$lang['INDEX_TABLE_DATE'] = '<th>Date</th>';
+$lang['INDEX_TABLE_ACTION'] = '<th>Delete</th>';
 
 // SAVE IMAGE PAGE
 
 $lang['SAVE_H1'] = 'SAVE IMAGE';
 $lang['SAVE_FORM_IMAGE_NAME'] = 'Image name: *';
 $lang['SAVE_FORM_IMAGE_DESCRIPTION'] = 'Description:';
-$lang['SAVE_FORM_IMAGE_NAME_HELP'] = 'Bitte den Namen des zu erstellenden Image eingeben';
+$lang['SAVE_FORM_IMAGE_DESCRIPTION_HELP'] = 'Describe&nbsp;the&nbsp;image&nbsp;with&nbsp;a&nbsp;few&nbsp;words...';
 $lang['SAVE_FORM_HARDDRIVE'] = 'Harddrive:';
 $lang['SAVE_FORM_HARDDRIVE_1'] = '1. Harddrive:';
 $lang['SAVE_FORM_HARDDRIVE_2'] = '2. Harddrive:';

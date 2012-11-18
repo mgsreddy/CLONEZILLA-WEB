@@ -61,12 +61,12 @@ if(!IS_AJAX) {
 	//Tabellen Kopf
 	//$return .= "\t<tr>\n";
 	$return .= "\t\t<th>ID</th>\n";
-	$return .= "\t\t<th>Image Name</th>\n";
-	$return .= "\t\t<th>Festplatte</th>\n";
-	$return .= "\t\t<th>Betriebssystem</th>\n";
-	$return .= "\t\t<th>Hardware</th>\n";
-	$return .= "\t\t<th>Datum</th>\n";
-	$return .= "\t\t<th>Aktion</th>\n";
+	$return .= $lang['INDEX_TABLE_IMAGE_NAME'];
+	$return .= $lang['INDEX_TABLE_HARDDISK'];
+	$return .= $lang['INDEX_TABLE_OS'];
+	$return .= $lang['INDEX_TABLE_HARDWARE'];
+	$return .= $lang['INDEX_TABLE_DATE'];
+	$return .= $lang['INDEX_TABLE_ACTION'];
 	//$return .= "\t</tr>\n";
 	///////
 	

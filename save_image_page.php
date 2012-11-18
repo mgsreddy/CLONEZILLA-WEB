@@ -69,7 +69,7 @@
 </div>
 <div id="safe_form_right"> 
 <label class='right' for="image_description"><?php echo $lang['SAVE_FORM_IMAGE_DESCRIPTION']; ?></label>
-<textarea class="textarea"placeholder="Describe the image with some words..." id="image_description" name="image_description"></textarea>
+<textarea class="textarea"placeholder= <?php echo $lang['SAVE_FORM_IMAGE_DESCRIPTION_HELP'];?> id="image_description" name="image_description"></textarea>
 </div>	
 
 
