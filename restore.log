@@ -29,4 +29,4 @@ The sfdisk log when running clonezilla is in client /var/log/clonezilla-restore-
 *****************************************************.
 [1;33mNow set the client machines to boot from PXE or Etherboot (refer to http://drbl.sourceforge.net for more details). Then boot those clients, so that the template image can be cloned to them!
 NOTE! (1) If Etherboot is used on client computers, version 5.4.0 or newer is required! (2) If the cloned OS is MS windows, and it fails to boot with an error message like "Missing Operating System" or "Invalid System Disk", then you can try to (1) change the IDE hard drive settings in the BIOS to use LBA mode instead of AUTO mode. (2) Or you can try to use parameter -t1 when restoring.
-[0;39m
+[0;39mClient 192.168.100.10 (d0:67:e5:3b:3c:16) finished cloning. Stats: Multicast restored DELL_BIG_CLEAN, /dev/sda1, success, 48.3 GB = 11787157 Blocks, 17.868 mins;

@@ -32,9 +32,21 @@
   <section id="content_index">
     <article>
       <h2>Einstellungen:</h2>
+<?php
 
-   
 
+ $menge = 0; 
+        $dirsize = 0; 
+        $dir = opendir('/home/partimag/DELL_BIG_CLEAN'); 
+        while (($file = readdir($dir))!==false) { 
+         if ($file[0] <> '.') { 
+          $menge++; 
+         $dirsize= $dirsize + filesize($file); 
+        }} 
+        closedir($dir); 
+        echo $menge;  
+
+ ?>
 
 
 
