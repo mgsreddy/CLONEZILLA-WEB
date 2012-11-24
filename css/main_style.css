@@ -1,6 +1,8 @@
 /* HTML5 HACK -------------------------------------- */  
-header, section, footer, aside, nav, article {  
- display: block
+header, section, footer, aside, nav, article {
+	display: block;
+	width: auto;
+	float: left;
 }
  
 /* LAYOUT ------------------------------------------ */
@@ -385,5 +387,5 @@ table.table1{
 }
 
 #languages#languages {
-  float:right;
+	float: right;
 }
